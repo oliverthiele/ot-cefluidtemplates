@@ -1,0 +1,19 @@
+tt_content {
+  ot_cefluidtemplates =< lib.contentElement
+  ot_cefluidtemplates {
+    templateName = TEXT
+    templateName.stdWrap.data = flexform : pi_flexform:templateName
+
+    templateRootPaths {
+      0 = EXT:ot_cefluidtemplates/Resources/Private/Templates/
+    }
+
+    partialRootPaths {
+      0 = EXT:ot_cefluidtemplates/Resources/Private/Partials/
+    }
+
+    layoutRootPaths {
+      0 = EXT:ot_cefluidtemplates/Resources/Private/Layouts/
+    }
+  }
+}

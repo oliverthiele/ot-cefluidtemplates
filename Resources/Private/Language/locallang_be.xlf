@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en"
+		  datatype="plaintext"
+		  original="EXT:gsw_website/Resources/Private/Language/locallang.xlf"
+		  date="2020-10-03T16:35:00Z"
+		  product-name="ot_cefluidtemplate">
+		<header/>
+		<body>
+			<trans-unit id="wizard.title" resname="wizard.title">
+				<source>FluidTemplate</source>
+			</trans-unit>
+			<trans-unit id="wizard.description" resname="wizard.description">
+				<source>Content element for adding FluidTemplates e.g. as conversions.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+				<source>General</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
