@@ -9,7 +9,8 @@ call_user_func(
         /*********************
          * Add Content Element
          */
-        if (!is_array($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'])) {
+        if (!isset($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates']) ||
+            !is_array($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'])) {
             $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'] = [];
         }
 
