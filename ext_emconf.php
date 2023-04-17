@@ -5,20 +5,20 @@ $EM_CONF[$_EXTKEY] = [
     'description' => '',
     'category' => 'frontend',
     'state' => 'stable',
-    'uploadfolder' => false,
-    'createDirs' => '',
-    'clearCacheOnLoad' => false,
     'author' => 'Oliver Thiele',
     'author_email' => 'mail@oliver-thiele.de',
     'author_company' => 'Web Development Oliver Thiele',
+    'version' => '2.0.1',
     'constraints' => [
-        'depends' => [],
+        'depends' => [
+            'typo3' => '11.5.1-12.4.99',
+        ],
         'conflicts' => [],
         'suggests' => [],
     ],
     'autoload' => [
         'psr-4' => [
-            'OliverThiele\\OtCefluidtemplates\\' => 'Classes'
-        ]
-    ]
+            'OliverThiele\\OtCefluidtemplates\\' => 'Classes',
+        ],
+    ],
 ];

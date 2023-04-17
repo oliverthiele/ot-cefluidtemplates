@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') or die();
 
 call_user_func(
     function () {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        ExtensionManagementUtility::addStaticFile(
             'ot_cefluidtemplates',
             'Configuration/TypoScript/',
             'CE FluidTemplates'

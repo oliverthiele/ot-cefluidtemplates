@@ -1,4 +1,2 @@
-ot_cefluidtemplates {
-    # cat=General/links/a1; type=string; label=Template Directory
-    templates = EXT:ot_cefluidtemplates/Resources/Private/Templates/
-}
+# cat=General/links/a1; type=string; label=Template Directory:Please use a directory in your sitepackage.
+templates = EXT:ot_cefluidtemplates/Resources/Private/Templates/

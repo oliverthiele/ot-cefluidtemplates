@@ -17,9 +17,13 @@
 	"keywords": [
 		"TYPO3 CMS"
 	],
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"require": {
-		"typo3/cms-core": "^11.5"
+		"typo3/cms-core": "^11.5||^12.3"
+	}
+	,
+	"require-dev": {
+		"roave/security-advisories": "dev-latest"
 	},
 	"autoload": {
 		"psr-4": {

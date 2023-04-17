@@ -2,25 +2,29 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') or die();
 
 call_user_func(
     function () {
-        /*********************
-         * Add Content Element
-         */
-        if (!isset($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates']) ||
+        if (!isset($GLOBALS['TCA']['tt_content']['types']) ||
+            !is_array($GLOBALS['TCA']['tt_content']['types'])) {
+            $GLOBALS['TCA']['tt_content']['types'] = [];
+        }
+
+        if (!array_key_exists('ot_cefluidtemplates', $GLOBALS['TCA']['tt_content']['types']) ||
             !is_array($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'])) {
             $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'] = [];
         }
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        ExtensionManagementUtility::addTcaSelectItem(
             'tt_content',
             'CType',
             [
                 'LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.title',
                 'ot_cefluidtemplates',
-                'content-special-div'
+                'content-special-div',
             ],
             'html',
             'after'
@@ -54,7 +58,7 @@ call_user_func(
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
                 --div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended'
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
             ]
         );
     }

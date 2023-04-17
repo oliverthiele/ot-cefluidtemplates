@@ -10,16 +10,15 @@ use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExis
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Class FlexFormUserFunc
- * @package OliverThiele\OtCefluidtemplates\UserFunc
  */
 class FlexFormUserFunc
 {
     /**
-     * @param  array  $fConfig
-     * @return void
+     * @param array<mixed> $fConfig
      * @throws ExtensionConfigurationPathDoesNotExistException
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      */
@@ -27,14 +26,21 @@ class FlexFormUserFunc
     {
         $files = [];
         $dirs = [];
+        $templatePath = '';
 
         $extensionSettings = GeneralUtility::makeInstance(
             ExtensionConfiguration::class
-        )->get('ot_cefluidtemplates', 'ot_cefluidtemplates');
+        )->get('ot_cefluidtemplates');
+
+        if (is_array($extensionSettings) && is_string(
+            $extensionSettings['templates']
+        ) && $extensionSettings['templates'] !== '') {
+            $templatePath = $extensionSettings['templates'];
+        }
 
         preg_match_all(
             '/^EXT:(.*)(\/.*)$/mU',
-            $extensionSettings['templates'],
+            $templatePath,
             $matches,
             PREG_SET_ORDER,
             0
@@ -42,7 +48,7 @@ class FlexFormUserFunc
         $path = ExtensionManagementUtility::extPath($matches[0][1]);
 
         /** @var DirectoryIterator $fileInfo */
-        foreach (new DirectoryIterator($path.$matches[0][2]) as $fileInfo) {
+        foreach (new DirectoryIterator($path . $matches[0][2]) as $fileInfo) {
             if ($fileInfo->isDot()) {
                 continue;
             }
@@ -50,15 +56,15 @@ class FlexFormUserFunc
             if ($fileInfo->isFile()) {
                 $templateName = $fileInfo->getBasename('.html');
                 $files[] = [
-                    'name' => $this->camelCaseTostartCase($templateName),
-                    'id' => $templateName
+                    'name' => $this->camelCaseToStartCase($templateName),
+                    'id' => $templateName,
                 ];
             }
             if ($fileInfo->isDir()) {
                 $dirName = $fileInfo->getBasename();
                 $dirs[] = [
-                    'name' => $this->camelCaseTostartCase($dirName),
-                    'id' => '--div--'
+                    'name' => $this->camelCaseToStartCase($dirName),
+                    'id' => '--div--',
                 ];
                 $filesInDirectory = $this->getFilesFromDirectory($fileInfo->getPathname(), $dirName);
                 foreach ($filesInDirectory as $file) {
@@ -66,20 +72,20 @@ class FlexFormUserFunc
                 }
             }
         }
-        $files = array_merge($files, $dirs);
+        $files = [...$files, ...$dirs];
 
         foreach ($files as $data) {
             $fConfig['items'][] = [
                 $data['name'],
-                $data['id']
+                $data['id'],
             ];
         }
     }
 
     /**
-     * @param  string  $path
-     * @param  string  $dirName
-     * @return array
+     * Get files from directory
+     *
+     * @return array<int, array{name: string, id: string}>
      */
     private function getFilesFromDirectory(string $path, string $dirName): array
     {
@@ -92,8 +98,8 @@ class FlexFormUserFunc
             if ($fileInfo->isFile()) {
                 $templateName = $fileInfo->getBasename('.html');
                 $files[] = [
-                    'name' => $this->camelCaseTostartCase($templateName),
-                    'id' => $dirName.'/'.$templateName
+                    'name' => $this->camelCaseToStartCase($templateName),
+                    'id' => $dirName . '/' . $templateName,
                 ];
             }
         }
@@ -102,11 +108,9 @@ class FlexFormUserFunc
 
     /**
      * Converts "CamelCase" to "Start Case"
-     * @param  string  $string
-     * @return string
      */
-    private function camelCaseTostartCase(string $string)
+    private function camelCaseToStartCase(string $string): string
     {
-        return trim(preg_replace('/(?<! )[A-Z][a-z]/', ' $0', $string));
+        return trim((string)preg_replace('/(?<! )[A-Z][a-z]/', ' $0', $string));
     }
 }
