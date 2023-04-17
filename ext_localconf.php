@@ -12,7 +12,7 @@ call_user_func(
 
         if ($versionInformation->getMajorVersion() < 12) {
             ExtensionManagementUtility::addPageTSConfig(
-                '@import "EXT:ot_cefluidtemplate/Configuration/page.tsconfig"'
+                '@import "EXT:ot_cefluidtemplates/Configuration/page.tsconfig"'
             );
         }
     }
