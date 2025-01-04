@@ -8,6 +8,8 @@ defined('TYPO3') or die();
 
 call_user_func(
     static function () {
+        $ll = 'LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:';
+
         if (!isset($GLOBALS['TCA']['tt_content']['types']) ||
             !is_array($GLOBALS['TCA']['tt_content']['types'])) {
             $GLOBALS['TCA']['tt_content']['types'] = [];
@@ -18,25 +20,19 @@ call_user_func(
             $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'] = [];
         }
 
-        ExtensionManagementUtility::addTcaSelectItem(
-            'tt_content',
-            'CType',
+        ExtensionManagementUtility::addPlugin(
             [
-                'LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.title',
-                'ot_cefluidtemplates',
-                'content-special-div',
+                'label' => $ll . 'wizard.title',
+                'value' => 'ot_cefluidtemplates',
+                'icon' => 'icon-ot-cefluidtemplate',
+                'group' => 'extras',
+                'description' => $ll . 'wizard.description',
             ],
-            'html',
-            'after'
+            'CType',
+            'ot_cefluidtemplates',
         );
 
-        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['ot_cefluidtemplates'] = 'layout,select_key,pages';
         $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,ot_cefluidtemplates'] = 'FILE:EXT:ot_cefluidtemplates/Configuration/FlexForm/FlexForm.xml';
-
-        /*************
-         * Assign Icon
-         */
-        $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['ot_cefluidtemplates'] = 'content-special-div';
 
         /************************
          * Configure element type

@@ -1,34 +1,27 @@
 <T3DataStructure>
-    <meta>
-        <langDisable>1</langDisable>
-    </meta>
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>
-                        LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.sheet_general
-                    </sheetTitle>
-                </TCEforms>
+                <sheetTitle>
+                    LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.sheet_general
+                </sheetTitle>
                 <type>array</type>
                 <el>
                     <templateName>
-                        <TCEforms>
-                            <label>Template Name</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>
-                                    OliverThiele\OtCefluidtemplates\UserFunc\FlexFormUserFunc->getTemplateNames
-                                </itemsProcFunc>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0"></numIndex>
-                                        <numIndex index="1">0</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.templateName
+                        </label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <itemsProcFunc>OliverThiele\OtCefluidtemplates\UserFunc\FlexFormUserFunc->getTemplateNames</itemsProcFunc>
+                            <items type="array">
+                                <numIndex index="0">
+                                    <label> </label>
+                                    <value>0</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </templateName>
                 </el>
             </ROOT>

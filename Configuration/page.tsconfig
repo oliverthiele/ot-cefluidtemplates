@@ -1,8 +1,8 @@
 mod.wizards.newContentElement.wizardItems.extras {
-  header = Extras
+  header = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.header
   elements {
     ot_cefluidtemplates {
-      iconIdentifier = content-special-div
+      iconIdentifier = icon-ot-cefluidtemplate
       title = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.title
       description = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.description
       tt_content_defValues {
