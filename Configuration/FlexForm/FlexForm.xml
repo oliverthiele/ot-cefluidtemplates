@@ -6,7 +6,9 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.sheet_general</sheetTitle>
+                    <sheetTitle>
+                        LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.sheet_general
+                    </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -16,10 +18,12 @@
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
-                                <itemsProcFunc>OliverThiele\OtCefluidtemplates\UserFunc\FlexFormUserFunc->getTemplateNames</itemsProcFunc>
+                                <itemsProcFunc>
+                                    OliverThiele\OtCefluidtemplates\UserFunc\FlexFormUserFunc->getTemplateNames
+                                </itemsProcFunc>
                                 <items type="array">
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0"> </numIndex>
+                                        <numIndex index="0"></numIndex>
                                         <numIndex index="1">0</numIndex>
                                     </numIndex>
                                 </items>

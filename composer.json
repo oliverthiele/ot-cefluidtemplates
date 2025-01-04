@@ -1,7 +1,7 @@
 {
 	"name": "oliverthiele/ot-cefluidtemplates",
 	"type": "typo3-cms-extension",
-	"description": "Content element for adding FluidTemplates e.g. as CTAs, conversions …",
+	"description": "Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.",
 	"homepage": "https://www.oliver-thiele.de/",
 	"authors": [
 		{
@@ -17,13 +17,8 @@
 	"keywords": [
 		"TYPO3 CMS"
 	],
-	"version": "2.0.2",
 	"require": {
-		"typo3/cms-core": "^11.5||^12.3"
-	}
-	,
-	"require-dev": {
-		"roave/security-advisories": "dev-latest"
+		"typo3/cms-core": "^11.5||^12.4"
 	},
 	"autoload": {
 		"psr-4": {

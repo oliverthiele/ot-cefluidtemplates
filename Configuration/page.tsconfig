@@ -12,5 +12,6 @@ mod.wizards.newContentElement.wizardItems.extras {
       }
     }
   }
+
   show := addToList(ot_cefluidtemplates)
 }

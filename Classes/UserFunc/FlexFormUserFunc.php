@@ -10,7 +10,6 @@ use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExis
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Class FlexFormUserFunc
@@ -18,7 +17,7 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 class FlexFormUserFunc
 {
     /**
-     * @param array<mixed> $fConfig
+     * @param array $fConfig
      * @throws ExtensionConfigurationPathDoesNotExistException
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      */
@@ -33,8 +32,8 @@ class FlexFormUserFunc
         )->get('ot_cefluidtemplates');
 
         if (is_array($extensionSettings) && is_string(
-            $extensionSettings['templates']
-        ) && $extensionSettings['templates'] !== '') {
+                $extensionSettings['templates']
+            ) && $extensionSettings['templates'] !== '') {
             $templatePath = $extensionSettings['templates'];
         }
 

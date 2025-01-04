@@ -7,7 +7,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') or die();
 
 call_user_func(
-    function () {
+    static function () {
         if (!isset($GLOBALS['TCA']['tt_content']['types']) ||
             !is_array($GLOBALS['TCA']['tt_content']['types'])) {
             $GLOBALS['TCA']['tt_content']['types'] = [];

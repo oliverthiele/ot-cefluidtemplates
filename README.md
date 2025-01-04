@@ -2,7 +2,7 @@
 
 ## TYPO3 Extension
 
-This extension for TYPO3 v11.5 & v12.x allows the output of FluidTemplates.
+This extension for TYPO3 v11.5 & v12.4 allows the output of FluidTemplates.
 All files in a folder to be configured and in the first subfolder can be selected as FluidTemplate by the editor.
 
 ### Installation
