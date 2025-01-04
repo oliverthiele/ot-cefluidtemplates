@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-	<file source-language="en"
-		  target-language="de"
+	<file source-language="en" target-language="de"
 		  datatype="plaintext"
 		  original="EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf"
-		  date="2020-10-03T16:35:00Z"
-		  product-name="ot_cefluidtemplate">
+		  date="2025-01-04T10:19:00Z"
+		  product-name="ot-cefluidtemplate">
 		<header/>
 		<body>
-			<trans-unit id="wizard.title" resname="wizard.title">
+			<trans-unit id="wizard.title" resname="wizard.title" approved="yes">
 				<source>FluidTemplate</source>
 				<target>FluidTemplate</target>
 			</trans-unit>
-			<trans-unit id="wizard.description" resname="wizard.description">
-				<source>Content element for adding FluidTemplates e.g. as CTAs, conversions, …</source>
-				<target>Inhaltselement zum Hinzufügen von FluidTemplates z.B. als CTAs, Konversionen, …</target>
+			<trans-unit id="wizard.description" resname="wizard.description" approved="yes">
+				<source>Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.</source>
+				<target>Inhaltselement zum Hinzufügen von FluidTemplates z.B. als CTAs, Konversionen, usw.</target>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+			<trans-unit id="wizard.header" resname="wizard.header" approved="yes">
+				<source>Extras</source>
+				<target>Extras</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general" approved="yes">
 				<source>General</source>
 				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.templateName" resname="tt_content.pi_flexform.templateName" approved="yes">
+				<source>Template Name</source>
+				<target>Template Name</target>
 			</trans-unit>
 		</body>
 	</file>
