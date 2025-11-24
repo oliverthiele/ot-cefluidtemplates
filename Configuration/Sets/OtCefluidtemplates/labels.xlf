@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext"
+		  original="EXT:ot_cefluidtemplates/Configuration/Sets/OtCefluidtemplates/labels.xlf"
+		  date="2025-10-16T11:06:00Z" product-name="ot-cefluidtemplates">
+		<header/>
+		<body>
+			<trans-unit id="label" resname="label">
+				<source>Content Element: FluidTemplates</source>
+			</trans-unit>
+			<trans-unit id="categories.OtCefluidtemplates" resname="categories.OtCefluidtemplates">
+				<source>CE FluidTemplates</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
