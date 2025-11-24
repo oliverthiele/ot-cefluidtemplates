@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['ot_cefluidtemplates'] = [
     'title' => 'CE Fluidtemplates',
     'description' => 'Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.',
     'category' => 'frontend',
@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Oliver Thiele',
     'author_email' => 'mail@oliver-thiele.de',
     'author_company' => 'Web Development Oliver Thiele',
-    'version' => '3.0.0',
+    'version' => '3.1.0',
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.0-13.4.99',
