@@ -1,0 +1,4 @@
+elements:
+  - ctype: ot_cefluidtemplates
+    groups: [group_content_wide]
+    grid: { minCols: 4, requiresFullWidth: false }
