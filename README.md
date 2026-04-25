@@ -1,56 +1,58 @@
-# EXT:ot_cefluidtemplates
+# ot_cefluidtemplates — Fluid Template Content Element for TYPO3
 
-Version 3.0.0 for TYPO3 v12
+TYPO3 content element for rendering Fluid templates selected by editors from a configured template directory. Useful for
+recurring layout elements such as CTAs, teasers, or conversion blocks.
 
-## TYPO3 Extension
+[![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org/)
+[![Packagist Version](https://img.shields.io/packagist/v/oliverthiele/ot-cefluidtemplates.svg)](https://packagist.org/packages/oliverthiele/ot-cefluidtemplates)
+[![PHP](https://img.shields.io/packagist/dependency-v/oliverthiele/ot-cefluidtemplates/php.svg)](https://php.net/)
+[![License](https://img.shields.io/packagist/l/oliverthiele/ot-cefluidtemplates.svg)](LICENSE)
+[![Changelog](https://img.shields.io/badge/Changelog-CHANGELOG.md-blue.svg)](CHANGELOG.md)
 
-This extension for TYPO3 allows the output of FluidTemplates.
-and is intended for recurring elements, which can be inserted by the editors on different pages
-and should get a centrally defined layout.
+## Features
 
-But it can also be used as a replacement for the TYPO3 content element HTML.
+- Editors select a Fluid template from a backend select field
+- Template path configurable via Extension Configuration
+- Templates and partials managed in the sitepackage
+- FlexForm configuration for per-record template path overrides
+- TYPO3 v13 and v14 compatible (Site Set ready)
 
-This is often more useful for several reasons:
+## Requirements
 
-* Editors do not have to copy the HTML code from one content element to another multiple times or work with
-  the TYPO3 content element "Insert Records" (which can then lead to unnecessary div containers with unwanted spacing).
-* Links to internal pages work using the page ID, since all ViewHelpers can be used.
-* Changes can be managed/deployed with Git.
-* Editors can no longer include arbitrary HTML code.
-* It's easier to find strings in an IDE than in the TYPO3 database.
+| Requirement | Version        |
+|-------------|----------------|
+| TYPO3       | ^13.4 \| ^14.3 |
+| PHP         | >=8.3          |
 
-### Installation
+## Installation
 
-Composer Installation
-
-```shell
+```bash
 composer require oliverthiele/ot-cefluidtemplates
 ```
 
-### Configuration
+## Configuration
 
-#### Template path
+### Template Path
 
-In the backend module "Settings -> Extension Configuration" the path to the templates can be adjusted.
-It would make sense to adjust to something like "EXT:my_sitepackage/Resources/Private/Conversions/Templates/".
+Set the base template path in the TYPO3 backend under **Settings → Extension Configuration → ot_cefluidtemplates**:
 
-#### TypoScript
+```
+EXT:my_sitepackage/Resources/Private/Conversions/Templates/
+```
 
-Now the new path to the Fluid templates, layout and partials must be adjusted in your site package extension:
+### TypoScript
 
-##### Example:
+Configure template, partial, and layout root paths in your sitepackage:
 
-```typo3_typoscript
+```typoscript
 tt_content {
     ot_cefluidtemplates {
         templateRootPaths {
             10 = EXT:my_sitepackage/Resources/Private/Conversions/Templates/
         }
-
         partialRootPaths {
             10 = EXT:my_sitepackage/Resources/Private/Conversions/Partials/
         }
-
         layoutRootPaths {
             10 = EXT:my_sitepackage/Resources/Private/Conversions/Layouts/
         }
@@ -58,16 +60,28 @@ tt_content {
 }
 ```
 
-#### Template structure
+## Usage
 
-All files in a folder to be configured and in the first subfolder can be selected as FluidTemplate by the editor.
+### Template Directory Structure
 
-It is important to consider in advance which folder structure you want to use, because the paths within the folder
-are stored in the database without further mapping.
+All `.html` files in the configured directory and its first-level subdirectories are available to editors as a select
+field. CamelCase filenames are automatically split into readable labels.
 
-In the file names, CamelCase is automatically preceded by spaces.
+```
+Templates/
+├── SocialMedia/
+│   └── SocialMediaShare.html   →  Group "Social Media" / Label "Social Media Share"
+└── Teaser.html                 →  Label "Teaser"
+```
 
-##### Example:
+### Why Use This Instead of the HTML Content Element
 
-The file path `my_sitepackage/Resources/Private/Conversions/Templates/SocialMedia/SocialMediaShare.html`
-would be displayed to the editor in a select field as **"Social Media Share"** in the optgroup **"Social Media"**.
+- Internal page links work via page ID (all ViewHelpers available)
+- Templates are version-controlled in Git
+- Editors cannot inject arbitrary HTML
+- Easier to find strings in an IDE than in the database
+- No duplication via "Insert Records" workarounds
+
+## License
+
+GPL-2.0-or-later — © Oliver Thiele
