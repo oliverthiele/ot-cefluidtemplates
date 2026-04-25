@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -32,7 +33,11 @@ call_user_func(
             'ot_cefluidtemplates',
         );
 
-        $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates']['columnsOverrides']['pi_flexform']['config']['ds'] = 'FILE:EXT:ot_cefluidtemplates/Configuration/FlexForm/FlexForm.xml';
+        if ((new Typo3Version())->getMajorVersion() >= 14) {
+            $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates']['columnsOverrides']['pi_flexform']['config']['ds'] = 'FILE:EXT:ot_cefluidtemplates/Configuration/FlexForm/FlexForm.xml';
+        } else {
+            $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,ot_cefluidtemplates'] = 'FILE:EXT:ot_cefluidtemplates/Configuration/FlexForm/FlexForm.xml';
+        }
 
         /************************
          * Configure element type
