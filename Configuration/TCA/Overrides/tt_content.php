@@ -11,13 +11,13 @@ call_user_func(
     static function () {
         $ll = 'LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:';
 
-        if (!isset($GLOBALS['TCA']['tt_content']['types']) ||
-            !is_array($GLOBALS['TCA']['tt_content']['types'])) {
+        if (!isset($GLOBALS['TCA']['tt_content']['types'])
+            || !is_array($GLOBALS['TCA']['tt_content']['types'])) {
             $GLOBALS['TCA']['tt_content']['types'] = [];
         }
 
-        if (!array_key_exists('ot_cefluidtemplates', $GLOBALS['TCA']['tt_content']['types']) ||
-            !is_array($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'])) {
+        if (!array_key_exists('ot_cefluidtemplates', $GLOBALS['TCA']['tt_content']['types'])
+            || !is_array($GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'])) {
             $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'] = [];
         }
 

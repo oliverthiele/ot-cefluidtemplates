@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-	<file source-language="en"
-		  datatype="plaintext"
-		  original="EXT:gsw_website/Resources/Private/Language/locallang.xlf"
-		  date="2025-01-04T10:19:00Z"
-		  product-name="ot-cefluidtemplate">
-		<header/>
-		<body>
-			<trans-unit id="wizard.header" resname="wizard.header">
-				<source>Extras</source>
-			</trans-unit>
-			<trans-unit id="wizard.title" resname="wizard.title">
-				<source>FluidTemplate</source>
-			</trans-unit>
-			<trans-unit id="wizard.description" resname="wizard.description">
-				<source>Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.</source>
-			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
-				<source>General</source>
-			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.templateName" resname="tt_content.pi_flexform.templateName">
-				<source>Template Name</source>
-			</trans-unit>
-		</body>
-	</file>
+  <file source-language="en"
+        datatype="plaintext"
+        original="EXT:gsw_website/Resources/Private/Language/locallang.xlf"
+        date="2025-01-04T10:19:00Z"
+        product-name="ot-cefluidtemplate">
+    <header/>
+    <body>
+      <trans-unit id="wizard.header" resname="wizard.header">
+        <source>Extras</source>
+      </trans-unit>
+      <trans-unit id="wizard.title" resname="wizard.title">
+        <source>FluidTemplate</source>
+      </trans-unit>
+      <trans-unit id="wizard.description" resname="wizard.description">
+        <source>Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.</source>
+      </trans-unit>
+      <trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+        <source>General</source>
+      </trans-unit>
+      <trans-unit id="tt_content.pi_flexform.templateName" resname="tt_content.pi_flexform.templateName">
+        <source>Template Name</source>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
