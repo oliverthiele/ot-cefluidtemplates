@@ -1,10 +1,10 @@
 mod.wizards.newContentElement.wizardItems.extras {
-  header = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.header
+  header = ot_cefluidtemplates.be:wizard.header
   elements {
     ot_cefluidtemplates {
       iconIdentifier = icon-ot-cefluidtemplate
-      title = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.title
-      description = LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:wizard.description
+      title = ot_cefluidtemplates.be:wizard.title
+      description = ot_cefluidtemplates.be:wizard.description
       tt_content_defValues {
         CType = ot_cefluidtemplates
         header = CE Fluidtemplate
