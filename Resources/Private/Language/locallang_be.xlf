@@ -1,27 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en"
-        datatype="plaintext"
-        original="EXT:gsw_website/Resources/Private/Language/locallang.xlf"
-        date="2025-01-04T10:19:00Z"
-        product-name="ot-cefluidtemplate">
-    <header/>
-    <body>
-      <trans-unit id="wizard.header" resname="wizard.header">
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+  <file id="ot-cefluidtemplates-locallang-be"
+        original="EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf">
+    <unit id="wizard.header">
+      <segment>
         <source>Extras</source>
-      </trans-unit>
-      <trans-unit id="wizard.title" resname="wizard.title">
+      </segment>
+    </unit>
+    <unit id="wizard.title">
+      <segment>
         <source>FluidTemplate</source>
-      </trans-unit>
-      <trans-unit id="wizard.description" resname="wizard.description">
+      </segment>
+    </unit>
+    <unit id="wizard.description">
+      <segment>
         <source>Content element for adding FluidTemplates e.g. as CTAs, conversions, etc.</source>
-      </trans-unit>
-      <trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+      </segment>
+    </unit>
+    <unit id="tt_content.tabs.configuration">
+      <segment>
+        <source>Configuration</source>
+      </segment>
+    </unit>
+    <unit id="tt_content.pi_flexform.sheet_general">
+      <segment>
         <source>General</source>
-      </trans-unit>
-      <trans-unit id="tt_content.pi_flexform.templateName" resname="tt_content.pi_flexform.templateName">
+      </segment>
+    </unit>
+    <unit id="tt_content.pi_flexform.templateName">
+      <segment>
         <source>Template Name</source>
-      </trans-unit>
-    </body>
+      </segment>
+    </unit>
   </file>
 </xliff>
