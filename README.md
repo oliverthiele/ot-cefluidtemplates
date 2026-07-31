@@ -3,7 +3,7 @@
 TYPO3 content element for rendering Fluid templates selected by editors from a configured template directory. Useful for
 recurring layout elements such as CTAs, teasers, or conversion blocks.
 
-[![TYPO3](https://img.shields.io/badge/TYPO3-13.4-orange.svg)](https://typo3.org/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-14.3-orange.svg)](https://typo3.org/)
 [![Packagist Version](https://img.shields.io/packagist/v/oliverthiele/ot-cefluidtemplates.svg)](https://packagist.org/packages/oliverthiele/ot-cefluidtemplates)
 [![PHP](https://img.shields.io/packagist/dependency-v/oliverthiele/ot-cefluidtemplates/php.svg)](https://php.net/)
 [![License](https://img.shields.io/packagist/l/oliverthiele/ot-cefluidtemplates.svg)](LICENSE)
@@ -21,8 +21,8 @@ recurring layout elements such as CTAs, teasers, or conversion blocks.
 
 | Requirement | Version        |
 |-------------|----------------|
-| TYPO3       | ^13.4 \| ^14.3 |
-| PHP         | >=8.3          |
+| TYPO3       | ^14.3          |
+| PHP         | >=8.4          |
 
 ## Installation
 
