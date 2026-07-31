@@ -3,13 +3,13 @@
         <sDEF>
             <ROOT>
                 <sheetTitle>
-                    LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.sheet_general
+                    ot_cefluidtemplates.be:tt_content.pi_flexform.sheet_general
                 </sheetTitle>
                 <type>array</type>
                 <el>
                     <templateName>
                         <label>
-                            LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:tt_content.pi_flexform.templateName
+                            ot_cefluidtemplates.be:tt_content.pi_flexform.templateName
                         </label>
                         <config>
                             <type>select</type>

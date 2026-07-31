@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] — 2026-07-31
+
+### Changed
+
+- **Breaking:** Drop TYPO3 v13 support, require TYPO3 `^14.3`
+- **Breaking:** Raise the PHP minimum to `>=8.4`
+- Migrate the language files from XLIFF 1.2 to XLIFF 2.0. Unit identifiers and
+  all translations are unchanged, so no label reference needs adjusting
+- Reference labels via translation domain mapping instead of full file paths.
+  `ot_cefluidtemplates.be:`, `core.form.tabs:` and `frontend.ttc:` replace the
+  verbose `LLL:EXT:` references in the TCA overrides, the FlexForm and
+  `page.tsconfig`
+
+### Fixed
+
+- The "Configuration" tab label was hardcoded in English in the TCA showitem.
+  It now uses the new key `tt_content.tabs.configuration` and renders as
+  "Konfiguration" in German
+- The `original` attribute of `Resources/Private/Language/locallang_be.xlf`
+  pointed at `EXT:gsw_website/Resources/Private/Language/locallang.xlf`, a
+  leftover from an unrelated extension. TYPO3 resolves the translation
+  fallback chain through this attribute
+
 ## [4.0.1] — 2026-07-28
 
 Maintenance release — no functional changes.

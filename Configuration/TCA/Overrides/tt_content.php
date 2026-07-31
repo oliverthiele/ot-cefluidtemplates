@@ -9,7 +9,7 @@ defined('TYPO3') or die();
 
 call_user_func(
     static function () {
-        $ll = 'LLL:EXT:ot_cefluidtemplates/Resources/Private/Language/locallang_be.xlf:';
+        $ll = 'ot_cefluidtemplates.be:';
 
         if (!isset($GLOBALS['TCA']['tt_content']['types'])
             || !is_array($GLOBALS['TCA']['tt_content']['types'])) {
@@ -46,19 +46,19 @@ call_user_func(
             $GLOBALS['TCA']['tt_content']['types']['ot_cefluidtemplates'],
             [
                 'showitem' => '
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
-                --div--;Configuration,pi_flexform,
-                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-                    --palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-                    --palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
-                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
+                --div--;core.form.tabs:general,
+                    --palette--;frontend.ttc:palette.general;general,
+                    --palette--;frontend.ttc:palette.headers;headers,
+                --div--;ot_cefluidtemplates.be:tt_content.tabs.configuration,pi_flexform,
+                --div--;frontend.ttc:tabs.appearance,
+                    --palette--;frontend.ttc:palette.frames;frames,
+                    --palette--;frontend.ttc:palette.appearanceLinks;appearanceLinks,
+                --div--;core.form.tabs:language,
+                    --palette--;;language,--div--;core.form.tabs:access,
+                    --palette--;;hidden,--palette--;frontend.ttc:palette.access;access,
+                --div--;core.form.tabs:categories,categories,
+                --div--;core.form.tabs:notes,rowDescription,
+                --div--;core.form.tabs:extended',
             ]
         );
     }
